@@ -53,7 +53,7 @@ sudo yum update -y
 sudo yum install -y tree vim git wget htop
 curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscli-exe-linux-x86_64.zip
 unzip awscli-exe-linux-x86_64.zip
-rm -rf aws awscli-exe-linux-x86_64.zip
 sudo ./aws/install
+rm -rf aws awscli-exe-linux-x86_64.zip
 EOF
 }
