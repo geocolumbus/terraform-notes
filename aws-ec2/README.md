@@ -7,7 +7,6 @@ You need to place the AWS keys into environment variables that Terraform can acc
 export TF_VAR_aws_access_key=LKWA...
 export TF_VAR_aws_secret_key=nPuh...
 export TF_VAR_aws_region=us-east-2
-e
 ```
 
 Now you can run the scripts:
