@@ -2,6 +2,16 @@
 
 ## Usage
 
+You need to place the AWS keys into environment variables that Terraform can access, like this:
+```bash
+export TF_VAR_aws_access_key=LKWA...
+export TF_VAR_aws_secret_key=nPuh...
+export TF_VAR_aws_region=us-east-2
+e
+```
+
+Now you can run the scripts:
+
 ```bash
 $ terraform init
 $ terraform plan
