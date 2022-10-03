@@ -3,6 +3,7 @@
 ## Usage
 
 You need to place the AWS keys into environment variables that Terraform can access, like this:
+
 ```bash
 export TF_VAR_aws_access_key=LKWA...
 export TF_VAR_aws_secret_key=nPuh...
@@ -15,6 +16,12 @@ Now you can run the scripts:
 $ terraform init
 $ terraform plan
 $ terraform apply
+```
+
+Tear down the install:
+
+```bash
+$ terraform destroy
 ```
 
 ## TODO
