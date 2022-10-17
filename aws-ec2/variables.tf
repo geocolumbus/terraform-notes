@@ -49,11 +49,21 @@ variable "user_data" {
     type = string
     default = <<EOF
 #!/bin/bash
-sudo yum update -y
+
+# Install useful tools
+sudo yum upgrade -y
 sudo yum install -y tree vim git wget htop
+
+# Install aws cli v2
 curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscli-exe-linux-x86_64.zip
 unzip awscli-exe-linux-x86_64.zip
 sudo ./aws/install
 rm -rf aws awscli-exe-linux-x86_64.zip
+
+# Install ATOP and SAR
+sudo amazon-linux-extras install epel -y
+sudo yum install sysstat atop --enablerepo=epel -y
+sudo sed -i 's/^INTERVAL=600.*/INTERVAL=60/' /etc/sysconfig/atop
+sudo sed -i -e 's|*/10|*/1|' -e 's|every 10 minutes|every 1 minute|' /etc/cron.d/sysstat
 EOF
 }

@@ -2,10 +2,27 @@
 
 ## Usage
 
+Configure the following system variables:
+
+```bash
+source ../load-aws-env-vars.sh
+```
+
+or manually ...
+
+```bash
+export TF_VAR_aws_access_key={aws_access_key}
+export TF_VAR_aws_secret_key={aws_access_key}
+export TF_VAR_aws_region=us-east-2
+```
+
+To deploy the aws ec2 server:
+
 ```bash
 $ terraform init
 $ terraform plan
 $ terraform apply
+$ terraform destroy
 ```
 
 ## TODO
