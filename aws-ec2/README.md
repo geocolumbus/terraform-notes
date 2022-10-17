@@ -25,6 +25,12 @@ $ terraform apply
 $ terraform destroy
 ```
 
+Tear down the install:
+
+```bash
+$ terraform destroy
+```
+
 ## TODO
 
 * Create meta configuration file
